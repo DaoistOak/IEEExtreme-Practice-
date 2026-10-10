@@ -1,10 +1,13 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include <vector>
 
 using namespace std;
 
 int c[1000000];
 int main() {
+
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
   int cities, total_miles;
   cin >> cities >> total_miles;
   for (int i = 1; i < cities; i++) {
@@ -29,9 +32,9 @@ int main() {
     cin >> start >> dest;
     int leftover = total_miles - (c[dest] + c[start]);
     if (leftover >= 0 && dp[leftover]) {
-      cout << "YES\n";
+      cout << "Yes\n";
     } else {
-      cout << "NO\n";
+      cout << "No\n";
     }
   }
 

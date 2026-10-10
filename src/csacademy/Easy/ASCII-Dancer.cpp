@@ -5,9 +5,10 @@
 using namespace std;
 
 vector<string> man = {" o ", "/|\\", "/ \\"};
-bool front = true;
+bool front = false;
 
 void print() {
+
   for (string row : man) {
     if (front) {
       cout << row << "\n";
@@ -36,8 +37,10 @@ void print() {
 }
 
 int main() {
+
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
   string line;
-  print(); // starting position
 
   while (getline(cin, line)) {
     if (line.empty())

@@ -8,6 +8,24 @@ bin/
 # Compiled binaries without an extension
 a.out
 
+# Legacy pattern for testcase files written before .testcases/ existed, when
+# they landed beside the source. Names follow
+# testcases_{input,output}_file_format, default "<name>_input$(TCNUM).txt", and
+# TCNUM starts at 0 for received problems.
+*_input[0-9]*.txt
+*_output[0-9]*.txt
+
+# competItest's single-file testcase storage, same default name pattern:
+# testcases_single_file_format = "$(FNOEXT).testcases". Kept even though
+# testcases_use_single_file is false, in case that is ever turned on.
+*.testcases
+
+# The directory testcases are actually written to now (testcases_directory in
+# .competitest.lua). Listed last so it is the rule git reports for them, rather
+# than *.testcases above matching the directory name by accident. Git-ignored:
+# they arrive from the browser and can be fetched again at any time.
+.testcases/
+
 # Editor / OS files
 .vscode/
 .idea/
