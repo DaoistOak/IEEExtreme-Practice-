@@ -1,0 +1,16 @@
+# Build output
+build/
+bin/
+*.o
+*.out
+*.exe
+
+# Compiled binaries without an extension
+a.out
+
+# Editor / OS files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
